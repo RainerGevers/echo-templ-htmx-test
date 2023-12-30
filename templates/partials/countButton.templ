@@ -1,0 +1,17 @@
+package partials
+
+import "echo-templ-htmx-test/templates/shared"
+
+
+templ CountButton(initCount int) {
+    @shared.Page() {
+        <button hx-post="/clicked"
+            hx-trigger="click"
+            hx-target="#kaas"
+            hx-swap="outerHTML"
+        >
+            Click Me!
+        </button>
+        @Clicked(initCount)
+    }
+}

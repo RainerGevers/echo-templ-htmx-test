@@ -1,0 +1,9 @@
+package templates
+
+import "echo-templ-htmx-test/templates/shared"
+
+templ Hello(name string) {
+    @shared.Page() {
+	    <div>Hello, { name }</div>
+    }
+}
